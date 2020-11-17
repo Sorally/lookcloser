@@ -1,0 +1,20 @@
+#include "\masm32\include\resource.h"
+
+#define ID_EDIT1   101
+#define ID_EDIT2   102
+#define ID_BUTTON1 201
+#define ID_STATIC  -1
+
+DLGWIN DIALOGEX MOVEABLE IMPURE LOADONCALL DISCARDABLE	10, 10, 200, 130, 0
+STYLE DS_MODALFRAME | 0x0004 | DS_CENTER | WS_CAPTION | WS_SYSMENU | WS_VISIBLE | WS_POPUP
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif", 700, 0 /*FALSE*/
+BEGIN
+    CTEXT           "Email Address",ID_STATIC,   20,20,160,45,    SS_LEFT, , 0
+    EDITTEXT                        ID_EDIT1,    20,30,160,15,    ES_AUTOHSCROLL | ES_LEFT, , 0
+    CTEXT           "License Key",  ID_STATIC,   20,60,160,45,    SS_LEFT, , 0
+    EDITTEXT                        ID_EDIT2,    20,70,160,15,    ES_AUTOHSCROLL | ES_LEFT, , 0
+    PUSHBUTTON      "Register",     ID_BUTTON1,  20,90,160,25,    0, , 0
+END
+
+
