@@ -133,7 +133,7 @@ checklic proc
 
   mov eax, dword ptr[eml]
   xor eax, 12345678h
-  xor ebx, ebx
+  xor ebx, ebx                                          ; 52553719
   xor ecx, ecx
   mov counter, 7
   lea esi, lic
